@@ -1,3 +1,4 @@
+btrfs
 cifs
 dm_crypt
 dm_mod
@@ -26,5 +27,6 @@ vfat
 xen-
 xt_
 xfs
+zfs
 zram
 zstd
