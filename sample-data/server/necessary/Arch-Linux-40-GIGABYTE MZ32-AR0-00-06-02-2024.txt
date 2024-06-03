@@ -1,5 +1,4 @@
-Module
-algif_hash
+Modulealgif_hash
 af_alg
 ipt_REJECT
 nf_reject_ipv4

@@ -21,13 +21,16 @@ output(){
 dataset_selection() {
     output 'Which dataset do you want to generate the kmod blacklist for?'
     output '1) VPS'
-    output '2) Workstation'
+    output '2) Bare Metal Servers'
+    output '3) Workstation'
     output 'Insert the number of your selection:'
     read -r choice
     case $choice in
         1 ) dataset='vps'
             ;;
-        2 ) dataset='workstation'
+        2 ) dataset='server'
+            ;;
+        3 ) dataset='workstation'
             ;;
         * ) output 'You did not enter a valid selection.'
             dataset_selection
@@ -61,7 +64,7 @@ done < kmod-filter-all
 sed -i '/^$/d' blacklist.txt
 
 # Delete old files
-rm etc/modprobe.d/"${dataset}"-blacklist.conf
+rm -f etc/modprobe.d/"${dataset}"-blacklist.conf
 
 # Create final blacklist config
 while read -r KMOD; do

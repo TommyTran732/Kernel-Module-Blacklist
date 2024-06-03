@@ -1,4 +1,3 @@
-Module
 snd_seq_dummy
 snd_hrtimer
 wireguard
