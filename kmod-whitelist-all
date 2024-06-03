@@ -1,5 +1,6 @@
 ahci
 hyperv
+raid
 rfkill
 tpm
 vfio
