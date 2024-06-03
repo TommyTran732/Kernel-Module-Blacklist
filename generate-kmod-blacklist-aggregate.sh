@@ -70,6 +70,7 @@ while read -r KMOD; do
 sed -i "s/.*${KMOD}.*//gm" blacklist.txt
 done < kmod-whitelist-all
 
+# Only apply vendor whitelist for non VPS installations
 if [ "${dataset}" != 'vps' ]; then
     while read -r KMOD; do
     sed -i "s/^${KMOD}.*//gm" blacklist.txt
