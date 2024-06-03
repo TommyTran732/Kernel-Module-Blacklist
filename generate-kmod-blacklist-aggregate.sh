@@ -81,6 +81,17 @@ if [ "${dataset}" != 'vps' ]; then
     done < kmod-whitelist-hw-vendors-all
 fi
 
+# Apply whitelist for workstation
+if [ "${dataset}" = 'workstation' ]; then
+    while read -r KMOD; do
+    sed -i "s/^${KMOD}.*//gm" blacklist.txt
+    done < kmod-whitelist-workstation-start
+
+    while read -r KMOD; do
+    sed -i "s/.*${KMOD}.*//gm" blacklist.txt
+    done < kmod-whitelist-workstation-all
+fi
+
 # Delete empty lines
 sed -i '/^$/d' blacklist.txt
 
