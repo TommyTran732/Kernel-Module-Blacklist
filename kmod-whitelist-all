@@ -1,4 +1,5 @@
 hyperv
 rfkill
+vfio
 virtio
 vmw
