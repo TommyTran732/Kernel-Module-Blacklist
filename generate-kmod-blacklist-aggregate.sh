@@ -45,20 +45,30 @@ sort -u sample-data/"${dataset}"/available/* > blacklist.txt
 # Combine all sample data for necessary
 sort -u sample-data/vps/necessary/* > necessary.txt
 
+# Remove blacklisted modules from the necessary list
+
+while read -r KMOD; do
+sed -i "s/^${KMOD}.*//gm" necessary.txt
+done < kmod-blacklist-start
+
+while read -r KMOD; do
+sed -i "s/.*${KMOD}.*//gm" necessary.txt
+done < kmod-blacklist-all
+
 # Create the list to blacklist 
 while read -r KMOD; do
 sed -i "s/^${KMOD}$//gm" blacklist.txt
 done < necessary.txt
 
-# Module filtering
+# Remove whitelisted modules from the blacklist
 
 while read -r KMOD; do
 sed -i "s/^${KMOD}.*//gm" blacklist.txt
-done < kmod-filter-start
+done < kmod-whitelist-start
 
 while read -r KMOD; do
 sed -i "s/.*${KMOD}.*//gm" blacklist.txt
-done < kmod-filter-all
+done < kmod-whitelist-all
 
 # Delete empty lines
 sed -i '/^$/d' blacklist.txt

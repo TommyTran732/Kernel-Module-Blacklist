@@ -3,7 +3,7 @@
 This is my attempt at making a common kernel module blacklist that can be used across different systems.
 The goal is to be as strict as possible with this blacklist while not breaking common functionality and applications.
 
-The idea here is that we collect the list of kernel modules available and the list of kernel modules actively used on production systems. Unused kernel modules will be added to the blacklist. For a bit of convienience and reliability, we will also not blacklist the modules listed `kmod-filter-start` and `kmod-filter-all`.
+The idea here is that we collect the list of kernel modules available and the list of kernel modules actively used on production systems. Unused kernel modules will be added to the blacklist. For a bit of convienience and reliability, we will also not blacklist the modules listed `kmod-whitelist-start` and `kmod-whitelist-all`.
 
 ## Required data
 
@@ -37,7 +37,7 @@ Niche systems will be added to the `sample-data-not-used` directory. Old systems
 
 - Follow the instructions above get the list of availble and necessary kernel modules on each of your system.
 - Put your data in the appropriate directories in `sample-data`.
-- Adjust the filter list in `kmod-filter-start` and `kmod-filter-all`. Kernel modules with a name starting with a string inside `kmod-filter-start` will be removed from the blacklist. Likewise, kernel modules with a name containing the a string inside `kmod-filter-all` will also be removed from the blacklist.
+- Adjust whitelist list in `kmod-whitelist-start` and `kmod-whitelist-all`. Kernel modules with a name starting with a string inside `kmod-whitelist-start` will be removed from the blacklist. Likewise, kernel modules with a name containing the a string inside `kmod-whitelist-all` will also be removed from the blacklist.
 - Run `generate-kmod-blacklist-aggregate`. The generated blacklist will be put in `etc/modprobe.d`.
 
-Alternatively, if you only want to generate a blacklist for 1 specific running system, you can use `generate-kmod-blacklist`. Note that this will not apply the whitelist in `kmod-filter-start` and `kmod-filter-all`.
+Alternatively, if you only want to generate a blacklist for 1 specific running system, you can use `generate-kmod-blacklist`. Note that this will not apply the whitelist in `kmod-whitelist-start` and `kmod-whitelist-all`.
