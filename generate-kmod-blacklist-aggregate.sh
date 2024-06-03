@@ -70,6 +70,16 @@ while read -r KMOD; do
 sed -i "s/.*${KMOD}.*//gm" blacklist.txt
 done < kmod-whitelist-all
 
+if [ "${dataset}" != 'vps' ]; then
+    while read -r KMOD; do
+    sed -i "s/^${KMOD}.*//gm" blacklist.txt
+    done < kmod-whitelist-hw-vendors-start
+
+    while read -r KMOD; do
+    sed -i "s/.*${KMOD}.*//gm" blacklist.txt
+    done < kmod-whitelist-hw-vendors-all
+fi
+
 # Delete empty lines
 sed -i '/^$/d' blacklist.txt
 
