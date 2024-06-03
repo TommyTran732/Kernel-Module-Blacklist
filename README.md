@@ -29,17 +29,15 @@ Additionally, the output of `lshw`, information on your workload, etc will be gr
 
 ## Supported hardwware/Workload
 
-Reasonably new and common hard hardware and will be added to the `sample-data` directory and used to generate the kernel module blacklist. The same goes for server workloads - if it is a reasonably common workload, it will be supported.
+Reasonably new and common hard hardware/workloads will be added to the `sample-data` directory and used to generate a kernel module blacklist. Vulnerable kernel modules and technologies such as Thunderbolt will always remain on the blacklisted.
 
-One exception for this is the use of technologies that are known to be vulnerable, such as Thunderbolt. I will not allow known vulnerable kernel modules to be removed from the blacklist.
+Niche systems will be added to the `sample-data-not-used` directory. Old systems in `sample-data` will also be moved to `sample-data-not-used` when they become irrelevant. Systems in this directory will not be used to generate the kernel module blacklist, however their information remain available for the public. You can still generate your own blacklist.
 
-Niche systems will be added to the `sample-data-not-used` directory. Old systems in `sample-data` will also be moved to `sample-data-not-used` when they eventually become irrelevant. Systems in this directory will not be used to generate the kernel module blacklist, however their information will be available for the public just in case someone may find it helpful. You can still generate your own blacklist according to your liking.
-
-## Generate your own blacklist
+## Generating your own blacklist
 
 - Follow the instructions above get the list of availble and necessary kernel modules on each of your system.
 - Put your data in the appropriate directories in `sample-data`.
 - Adjust the filter list in `kmod-filter-start` and `kmod-filter-all`. Kernel modules with a name starting with a string inside `kmod-filter-start` will be removed from the blacklist. Likewise, kernel modules with a name containing the a string inside `kmod-filter-all` will also be removed from the blacklist.
 - Run `generate-kmod-blacklist-aggregate`. The generated blacklist will be put in `etc/modprobe.d`.
 
-Alternatively, if you only want to generate a blacklist for 1 specific running system, you can use `generate-kmod-blacklist` instead. Note that this will not apply the whitelist in `kmod-filter-start` and `kmod-filter-all`.
+Alternatively, if you only want to generate a blacklist for 1 specific running system, you can use `generate-kmod-blacklist`. Note that this will not apply the whitelist in `kmod-filter-start` and `kmod-filter-all`.
