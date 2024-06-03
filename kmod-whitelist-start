@@ -17,6 +17,7 @@ nvme
 pvpanic
 hv_
 sata_
+usb_storage
 vbox
 vfat
 xen-
