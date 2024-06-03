@@ -9,6 +9,7 @@ ebt_
 encrypted_keys
 exfat
 fat
+f2fs
 iptable_
 ipt_
 ip6table_
