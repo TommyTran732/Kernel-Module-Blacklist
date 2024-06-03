@@ -1,0 +1,1 @@
+Linux version 6.9.3-hardened1-1-hardened (linux-hardened@archlinux) (gcc (GCC) 14.1.1 20240522, GNU ld (GNU Binutils) 2.42.0) #1 SMP PREEMPT_DYNAMIC Sat, 01 Jun 2024 00:25:24 +0000
