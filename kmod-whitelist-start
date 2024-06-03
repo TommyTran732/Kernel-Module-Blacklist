@@ -20,6 +20,7 @@ nvme
 pvpanic
 hv_
 sata_
+spl
 uas
 usb_storage
 vbox
