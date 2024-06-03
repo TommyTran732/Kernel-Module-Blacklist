@@ -31,7 +31,7 @@ Additionally, the output of `lshw`, information on your workload, etc will be gr
 
 Reasonably new and common hard hardware and will be added to the `sample-data` directory and used to generate the kernel module blacklist. The same goes for server workloads - if it is a reasonably common workload, it will be supported.
 
-One exception for this is the use of technologies that are known to be vulnerable, such as Thunderbolt. Their kernel module will always remain blacklisted and whichever workload relies on them will not be supported.
+One exception for this is the use of technologies that are known to be vulnerable, such as Thunderbolt. I will not allow known vulnerable kernel modules to be removed from the blacklist.
 
 Niche systems will be added to the `sample-data-not-used` directory. Old systems in `sample-data` will also be moved to `sample-data-not-used` when they eventually become irrelevant. Systems in this directory will not be used to generate the kernel module blacklist, however their information will be available for the public just in case someone may find it helpful. You can still generate your own blacklist according to your liking.
 
