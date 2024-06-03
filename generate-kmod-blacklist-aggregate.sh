@@ -92,13 +92,13 @@ if [ "${dataset}" = 'workstation' ]; then
     done < kmod-whitelist-workstation-all
 fi
 
-# Delete empty lines
-sed -i '/^$/d' blacklist.txt
-
 # Reapply blacklists that got removed by the whitelist section
 while read -r KMOD; do
     echo "${KMOD}" >> blacklist.txt
 done < kmod-blacklist-reapply
+
+# Delete empty lines
+sed -i '/^$/d' blacklist.txt
 
 # Delete old files
 rm -f etc/modprobe.d/"${dataset}"-blacklist.conf
