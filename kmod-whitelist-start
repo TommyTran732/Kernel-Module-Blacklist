@@ -21,7 +21,9 @@ pvpanic
 hv_
 sata_
 spl
+squashfs
 uas
+udf
 usb_storage
 vbox
 vfat
