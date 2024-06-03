@@ -25,7 +25,7 @@ lsmod | awk '{ print $1 }' > necessary.txt
 
 - The output of `cat /proc/version`.
 
-Additionally, the output of `lshw`, information on your workload, etc will greatly be appreciated, but it is not necessary.
+Additionally, the output of `lshw`, information on your workload, etc will be greatly appreciated, but they are not necessary.
 
 ## Supported hardwware/Workload
 
