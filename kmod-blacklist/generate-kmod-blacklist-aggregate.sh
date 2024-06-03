@@ -62,7 +62,7 @@ sed -i '/^$/d' blacklist.txt
 
 # Create final blacklist config
 while read -r KMOD; do
-echo "install ${KMOD} /bin/false" >> ${dataset}-blacklist.conf
+echo "install ${KMOD} /bin/false" >> "${dataset}"-blacklist.conf
 done < blacklist.txt
 
 # Cleanup
