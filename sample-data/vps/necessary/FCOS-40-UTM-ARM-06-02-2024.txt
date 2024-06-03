@@ -1,4 +1,3 @@
-Module
 nft_fib_inet
 nft_fib_ipv4
 nft_fib_ipv6
