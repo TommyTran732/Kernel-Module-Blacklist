@@ -60,9 +60,12 @@ done < kmod-filter-all
 # Delete empty lines
 sed -i '/^$/d' blacklist.txt
 
+# Delete old files
+rm etc/modprobe.d/"${dataset}"-blacklist.conf
+
 # Create final blacklist config
 while read -r KMOD; do
-echo "install ${KMOD} /bin/false" >> "${dataset}"-blacklist.conf
+echo "install ${KMOD} /bin/false" >> etc/modprobe.d/"${dataset}"-blacklist.conf
 done < blacklist.txt
 
 # Cleanup
