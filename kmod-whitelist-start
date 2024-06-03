@@ -14,6 +14,7 @@ iptable_
 ipt_
 ip6table_
 ip6t_
+nfsv4
 nft_
 nf_
 ntfs3
