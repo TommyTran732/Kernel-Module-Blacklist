@@ -12,7 +12,7 @@ If you want to send me your data, at minimum you will need the following:
 - The available kernel module on your system. This can be obtained with:
 
 ```bash
-ls -R /lib/modules/"$(uname -r)"/kernel/{drivers,fs,net,sound} | grep "\.ko" | sed 's/.ko.xz//g' > blacklist.txt
+ls -R /lib/modules/"$(uname -r)"/kernel/{drivers,fs,net,sound} | grep "\.ko" | sed 's/.ko.xz//g' | sed 's/.ko.zst//g' > blacklist.txt
 ```
 
 - The kernel modules being used on your system. This can be obtained with:
