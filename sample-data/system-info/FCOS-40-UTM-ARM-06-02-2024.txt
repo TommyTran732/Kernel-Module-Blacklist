@@ -1,0 +1,203 @@
+Linux version 6.8.8-300.fc40.aarch64 (mockbuild@5b019a554d1e49cb86faa497683dc260) (gcc (GCC) 14.0.1 20240411 (Red Hat 14.0.1-0), GNU ld version 2.41-34.fc40) #1 SMP PREEMPT_DYNAMIC Sat Apr 27 18:11:03 UTC 2024
+
+localhost.localdomain       
+    description: Computer
+    product: QEMU Virtual Machine
+    vendor: QEMU
+    version: virt-7.2
+    width: 64 bits
+    capabilities: smbios-3.0.0 dmi-3.0.0 smp cp15_barrier swp tagged_addr_disabled
+    configuration: boot=normal uuid=494cab74-e018-4f9b-aa5b-db53010d7d53
+  *-core
+       description: Motherboard
+       physical id: 0
+     *-cpu
+          description: CPU
+          vendor: QEMU
+          physical id: 400
+          bus info: cpu@0
+          version: virt-7.2
+          slot: CPU 0
+          size: 2GHz
+          capacity: 2GHz
+          configuration: cores=2 enabledcores=2 threads=1
+     *-memory
+          description: System Memory
+          physical id: 1000
+          size: 2GiB
+          capacity: 2GiB
+          capabilities: ecc
+          configuration: errordetection=multi-bit-ecc
+        *-bank
+             description: DIMM RAM
+             vendor: QEMU
+             physical id: 0
+             slot: DIMM 0
+             size: 2GiB
+     *-firmware
+          description: BIOS
+          vendor: EFI Development Kit II / OVMF
+          physical id: 0
+          version: 0.0.0
+          date: 02/06/2015
+          size: 96KiB
+          capabilities: uefi virtualmachine
+     *-pci
+          description: Host bridge
+          product: QEMU PCIe Host bridge
+          vendor: Red Hat, Inc.
+          physical id: 100
+          bus info: pci@0000:00:00.0
+          version: 00
+          width: 32 bits
+          clock: 33MHz
+        *-network
+             description: Ethernet controller
+             product: Virtio network device
+             vendor: Red Hat, Inc.
+             physical id: 1
+             bus info: pci@0000:00:01.0
+             version: 00
+             width: 64 bits
+             clock: 33MHz
+             capabilities: msix bus_master cap_list rom
+             configuration: driver=virtio-pci latency=0
+             resources: iomemory:800-7ff irq:46 ioport:1100(size=32) memory:10040000-10040fff memory:8000000000-8000003fff memory:10000000-1003ffff
+           *-virtio0
+                description: Ethernet interface
+                physical id: 0
+                bus info: virtio@0
+                logical name: enp0s1
+                serial: c6:e2:47:ea:42:e7
+                capabilities: ethernet physical
+                configuration: autonegotiation=off broadcast=yes driver=virtio_net driverversion=1.0.0 ip=10.0.2.15 link=yes multicast=yes
+        *-scsi
+             description: SCSI storage controller
+             product: Virtio block device
+             vendor: Red Hat, Inc.
+             physical id: 2
+             bus info: pci@0000:00:02.0
+             version: 00
+             width: 64 bits
+             clock: 33MHz
+             capabilities: scsi msix bus_master cap_list
+             configuration: driver=virtio-pci latency=0
+             resources: iomemory:800-7ff irq:47 ioport:1000(size=128) memory:10041000-10041fff memory:8000004000-8000007fff
+           *-virtio1
+                description: Virtual I/O device
+                physical id: 0
+                bus info: virtio@1
+                logical name: /dev/vda
+                size: 20GiB (21GB)
+                capabilities: gpt-1.00 partitioned partitioned:gpt
+                configuration: driver=virtio_blk guid=e0c79de6-499d-4096-9f98-d1f1116937ed logicalsectorsize=512 sectorsize=512
+              *-volume:0
+                   description: reserved partition
+                   vendor: Linux
+                   physical id: 1
+                   bus info: virtio@1,1
+                   logical name: /dev/vda1
+                   serial: 3033146c-5688-4b9c-8ad9-a99af5f30349
+                   capacity: 1023KiB
+                   capabilities: nofs
+                   configuration: name=reserved
+              *-volume:1
+                   description: Windows FAT volume
+                   vendor: mkfs.fat
+                   physical id: 2
+                   bus info: virtio@1,2
+                   logical name: /dev/vda2
+                   version: FAT16
+                   serial: fbf7-8a4c
+                   size: 124MiB
+                   capacity: 126MiB
+                   capabilities: boot fat initialized
+                   configuration: FATs=2 filesystem=fat label=EFI-SYSTEM name=EFI-SYSTEM
+              *-volume:2
+                   description: EXT4 volume
+                   vendor: Linux
+                   physical id: 3
+                   bus info: virtio@1,3
+                   logical name: /dev/vda3
+                   logical name: /boot
+                   version: 1.0
+                   serial: 1a25643b-716e-4b28-9e8a-1c74e77fd09c
+                   size: 384MiB
+                   capabilities: journaled extended_attributes large_files huge_files dir_nlink recover 64bit extents ext4 ext2 initialized
+                   configuration: created=2024-01-05 15:16:31 filesystem=ext4 label=boot lastmountpoint=/boot modified=2024-06-02 23:12:12 mount.fstype=ext4 mount.options=ro,seclabel,nosuid,nodev,relatime mounted=2024-06-02 23:12:23 name=boot state=mounted
+              *-volume:3
+                   description: EFI partition
+                   physical id: 4
+                   bus info: virtio@1,4
+                   logical name: /dev/vda4
+                   logical name: /sysroot
+                   logical name: /
+                   logical name: /etc
+                   logical name: /usr
+                   logical name: /sysroot/ostree/deploy/fedora-coreos/var
+                   logical name: /var
+                   serial: 99217163-cfd9-424e-87ac-c716834e3d62
+                   capacity: 19GiB
+                   configuration: mount.fstype=xfs mount.options=rw,seclabel,relatime,attr2,inode64,logbufs=8,logbsize=32k,prjquota name=root state=mounted
+        *-communication
+             description: Communication controller
+             product: Virtio console
+             vendor: Red Hat, Inc.
+             physical id: 3
+             bus info: pci@0000:00:03.0
+             version: 00
+             width: 64 bits
+             clock: 33MHz
+             capabilities: msix bus_master cap_list
+             configuration: driver=virtio-pci latency=0
+             resources: iomemory:800-7ff irq:48 ioport:1080(size=64) memory:10042000-10042fff memory:8000008000-800000bfff
+           *-virtio2 UNCLAIMED
+                description: Virtual I/O device
+                physical id: 0
+                bus info: virtio@2
+                configuration: driver=virtio_console
+        *-generic:0
+             description: Unclassified device
+             product: Virtio RNG
+             vendor: Red Hat, Inc.
+             physical id: 4
+             bus info: pci@0000:00:04.0
+             version: 00
+             width: 64 bits
+             clock: 33MHz
+             capabilities: msix bus_master cap_list
+             configuration: driver=virtio-pci latency=0
+             resources: iomemory:800-7ff irq:45 ioport:1120(size=32) memory:10043000-10043fff memory:800000c000-800000ffff
+           *-virtio3 UNCLAIMED
+                description: Virtual I/O device
+                physical id: 0
+                bus info: virtio@3
+                configuration: driver=virtio_rng
+        *-generic:1
+             description: Unclassified device
+             product: Virtio memory balloon
+             vendor: Red Hat, Inc.
+             physical id: 5
+             bus info: pci@0000:00:05.0
+             version: 00
+             width: 64 bits
+             clock: 33MHz
+             capabilities: bus_master cap_list
+             configuration: driver=virtio-pci latency=0
+             resources: iomemory:800-7ff irq:46 ioport:10c0(size=64) memory:8000010000-8000013fff
+           *-virtio4 UNCLAIMED
+                description: Virtual I/O device
+                physical id: 0
+                bus info: virtio@4
+                configuration: driver=virtio_balloon
+     *-pnp00:00
+          product: PnP device PNP0c02
+          physical id: 1
+          capabilities: pnp
+          configuration: driver=system
+  *-input
+       product: Power Button
+       physical id: 1
+       logical name: input0
+       logical name: /dev/input/event0
+       capabilities: platform
