@@ -1,0 +1,273 @@
+Linux version 6.5.0-35-generic (buildd@bos02-arm64-011) (aarch64-linux-gnu-gcc-13 (Ubuntu 13.2.0-4ubuntu3) 13.2.0, GNU ld (GNU Binutils for Ubuntu) 2.41) #35-Ubuntu SMP PREEMPT_DYNAMIC Sat Apr 27 00:18:38 UTC 2024
+
+localhost                   
+    description: Computer
+    product: Parallels ARM Virtual Machine (Parallels_ARM_VM)
+    vendor: Parallels International GmbH.
+    version: 0.1
+    serial: Parallels-E6 37 67 AC 90 E3 40 A0 AD E6 E6 C0 F6 3A 27 3B
+    width: 64 bits
+    capabilities: smbios-3.0.0 dmi-3.0.0 smp cp15_barrier swp tagged_addr_disabled
+    configuration: family=Parallels VM sku=Parallels_ARM_VM uuid=e63767ac-90e3-40a0-ade6-e6c0f63a273b
+  *-core
+       description: Motherboard
+       product: Parallels ARM Virtual Platform
+       vendor: Parallels ARM Virtual Machine
+       physical id: 0
+       version: 0.1
+       serial: None
+       slot: None
+     *-firmware
+          description: BIOS
+          vendor: Parallels International GmbH.
+          physical id: 0
+          version: 19.4.0 (54962)
+          date: Mon, 20 May 2024 15:18:43
+          size: 128KiB
+          capacity: 2MiB
+          capabilities: pci bootselect acpi smartbattery uefi
+     *-cpu
+          description: CPU
+          product: ARMv8 (None)
+          vendor: Apple
+          physical id: 4
+          bus info: cpu@0
+          version: Apple Silicon
+          serial: None
+          slot: CPU
+          size: 2GHz
+          capacity: 2GHz
+          configuration: cores=2 enabledcores=2 threads=1
+     *-memory
+          description: System Memory
+          physical id: 5
+          slot: System board or motherboard
+          size: 6GiB
+        *-bank
+             description: DIMM DRAM EDO
+             physical id: 0
+             size: 6GiB
+             width: 32 bits
+     *-multimedia
+          description: Audio device
+          product: 82801I (ICH9 Family) HD Audio Controller
+          vendor: Intel Corporation
+          physical id: 1
+          bus info: pci@0000:00:01.0
+          logical name: card0
+          logical name: /dev/snd/controlC0
+          logical name: /dev/snd/hwC0D0
+          logical name: /dev/snd/pcmC0D0c
+          logical name: /dev/snd/pcmC0D0p
+          version: 00
+          width: 32 bits
+          clock: 33MHz
+          capabilities: pciexpress msi bus_master cap_list
+          configuration: driver=snd_hda_intel latency=0
+          resources: irq:29 memory:14000000-14003fff
+        *-input:0
+             product: HDA Intel Speaker
+             physical id: 0
+             logical name: input10
+             logical name: /dev/input/event10
+        *-input:1
+             product: HDA Intel Mic
+             physical id: 1
+             logical name: input5
+             logical name: /dev/input/event5
+        *-input:2
+             product: HDA Intel Speaker
+             physical id: 2
+             logical name: input6
+             logical name: /dev/input/event6
+        *-input:3
+             product: HDA Intel Speaker
+             physical id: 3
+             logical name: input7
+             logical name: /dev/input/event7
+        *-input:4
+             product: HDA Intel Speaker
+             physical id: 4
+             logical name: input8
+             logical name: /dev/input/event8
+        *-input:5
+             product: HDA Intel Speaker
+             physical id: 5
+             logical name: input9
+             logical name: /dev/input/event9
+     *-usb:0
+          description: USB controller
+          product: 82801FB/FBM/FR/FW/FRW (ICH6 Family) USB2 EHCI Controller
+          vendor: Intel Corporation
+          physical id: 2
+          bus info: pci@0000:00:02.0
+          version: 02
+          width: 32 bits
+          clock: 33MHz
+          capabilities: ehci bus_master
+          configuration: driver=ehci-pci latency=0
+          resources: irq:21 memory:1400d000-1400d3ff
+     *-usb:1
+          description: USB controller
+          product: uPD720200 USB 3.0 Host Controller
+          vendor: NEC Corporation
+          physical id: 3
+          bus info: pci@0000:00:03.0
+          version: 04
+          width: 32 bits
+          clock: 33MHz
+          capabilities: msi xhci bus_master cap_list
+          configuration: driver=xhci_hcd latency=0
+          resources: irq:25 memory:14008000-14008fff
+     *-network
+          description: Ethernet controller
+          product: Virtio network device
+          vendor: Red Hat, Inc.
+          physical id: 6
+          bus info: pci@0000:00:05.0
+          version: 00
+          width: 32 bits
+          clock: 33MHz
+          capabilities: pciexpress pm msix bus_master cap_list
+          configuration: driver=virtio-pci latency=0
+          resources: irq:16 memory:14009000-14009fff memory:1400a000-1400afff
+        *-virtio1
+             description: Ethernet interface
+             physical id: 0
+             bus info: virtio@1
+             logical name: enp0s5
+             serial: 4a:f1:10:0c:27:16
+             capabilities: ethernet physical
+             configuration: autonegotiation=off broadcast=yes driver=virtio_net driverversion=1.0.0 ip=10.211.55.107 link=yes multicast=yes
+     *-generic
+          description: Unassigned class
+          product: Virtual Machine Communication Interface
+          vendor: Parallels, Inc.
+          physical id: 9
+          bus info: pci@0000:00:09.0
+          version: 00
+          width: 32 bits
+          clock: 33MHz
+          capabilities: msi cap_list
+          configuration: driver=prl_tg latency=0
+          resources: irq:23 memory:1400b000-1400bfff
+     *-display
+          description: VGA compatible controller
+          product: Virtio 1.0 GPU
+          vendor: Red Hat, Inc.
+          physical id: a
+          bus info: pci@0000:00:0a.0
+          logical name: /dev/fb0
+          version: 01
+          width: 32 bits
+          clock: 33MHz
+          capabilities: msix vga_controller bus_master cap_list fb
+          configuration: depth=32 driver=virtio-pci latency=0 resolution=1024,768
+          resources: irq:17 memory:10000000-13ffffff memory:1400c000-1400cfff memory:14004000-14007fff
+        *-virtio2 UNCLAIMED
+             description: Virtual I/O device
+             physical id: 0
+             bus info: virtio@2
+             configuration: driver=virtio_gpu
+     *-virtio0 UNCLAIMED
+          description: Virtual I/O device
+          physical id: 7
+          bus info: virtio@0
+          configuration: driver=virtio_balloon
+     *-scsi:0
+          physical id: 8
+          logical name: scsi0
+          capabilities: emulated
+        *-disk
+             description: ATA Disk
+             product: Development-0 SS
+             physical id: 0.0.0
+             bus info: scsi@0:0.0.0
+             logical name: /dev/sda
+             version: 35PR
+             serial: B37VAMNF40XMNFZ7TP8J
+             size: 64GiB (68GB)
+             capabilities: gpt-1.00 partitioned partitioned:gpt
+             configuration: ansiversion=5 guid=9db8667b-8d23-4348-a50a-5c0a980640e4 logicalsectorsize=512 sectorsize=4096
+           *-volume:0
+                description: Windows FAT volume
+                vendor: mkfs.fat
+                physical id: 1
+                bus info: scsi@0:0.0.0,1
+                logical name: /dev/sda1
+                logical name: /boot/efi
+                version: FAT16
+                serial: e991-ffd1
+                size: 510MiB
+                capacity: 511MiB
+                capabilities: boot fat initialized
+                configuration: FATs=2 filesystem=fat mount.fstype=vfat mount.options=rw,relatime,fmask=0077,dmask=0077,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro name=EFI System Partition state=mounted
+           *-volume:1
+                description: EXT4 volume
+                vendor: Linux
+                physical id: 2
+                bus info: scsi@0:0.0.0,2
+                logical name: /dev/sda2
+                logical name: /
+                version: 1.0
+                serial: 7b3dbb68-dba5-4083-a668-b5a621ba40d7
+                size: 63GiB
+                capabilities: journaled extended_attributes large_files huge_files dir_nlink recover 64bit extents ext4 ext2 initialized
+                configuration: created=2024-01-20 03:21:13 filesystem=ext4 lastmountpoint=/ modified=2024-05-31 13:44:34 mount.fstype=ext4 mount.options=rw,relatime,errors=remount-ro mounted=2024-05-31 13:44:34 state=mounted
+     *-scsi:1
+          physical id: b
+          logical name: scsi1
+          capabilities: emulated
+        *-cdrom
+             description: DVD reader
+             product: Virtual DVD-ROM
+             physical id: 0.0.0
+             bus info: scsi@1:0.0.0
+             logical name: /dev/cdrom
+             logical name: /dev/sr0
+             version: R103
+             capabilities: removable audio dvd
+             configuration: ansiversion=5 status=nodisc
+  *-input:0
+       product: Power Button
+       physical id: 1
+       logical name: input0
+       logical name: /dev/input/event0
+       capabilities: platform
+  *-input:1
+       product: Parallels Virtual Mouse
+       physical id: 2
+       logical name: input1
+       logical name: /dev/input/event1
+       logical name: /dev/input/js0
+       logical name: /dev/input/mouse0
+       capabilities: usb
+  *-input:2
+       product: Parallels Virtual Mouse
+       physical id: 3
+       logical name: input2
+       logical name: /dev/input/event2
+       logical name: /dev/input/mouse1
+       capabilities: usb
+  *-input:3
+       product: Parallels Virtual Keyboard
+       physical id: 4
+       logical name: input3
+       logical name: /dev/input/event3
+       logical name: input3::capslock
+       logical name: input3::compose
+       logical name: input3::kana
+       logical name: input3::numlock
+       logical name: input3::scrolllock
+       capabilities: usb
+  *-input:4
+       product: Parallels Virtual Keyboard
+       physical id: 5
+       logical name: input4
+       logical name: /dev/input/event4
+       logical name: input4::capslock
+       logical name: input4::compose
+       logical name: input4::kana
+       logical name: input4::numlock
+       logical name: input4::scrolllock
+       capabilities: usb
