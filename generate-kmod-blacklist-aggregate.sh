@@ -74,11 +74,11 @@ done < kmod-whitelist-all
 if [ "${dataset}" != 'vps' ]; then
     while read -r KMOD; do
     sed -i "s/^${KMOD}.*//gm" blacklist.txt
-    done < kmod-whitelist-hw-vendors-start
+    done < kmod-whitelist-bare-metal-start
 
     while read -r KMOD; do
     sed -i "s/.*${KMOD}.*//gm" blacklist.txt
-    done < kmod-whitelist-hw-vendors-all
+    done < kmod-whitelist-bare-metal-all
 fi
 
 # Apply whitelist for workstation
@@ -94,6 +94,11 @@ fi
 
 # Delete empty lines
 sed -i '/^$/d' blacklist.txt
+
+# Reapply blacklists that got removed by the whitelist section
+while read -r KMOD; do
+    echo "${KMOD}" >> blacklist.txt
+done < kmod-blacklist-reapply
 
 # Delete old files
 rm -f etc/modprobe.d/"${dataset}"-blacklist.conf
