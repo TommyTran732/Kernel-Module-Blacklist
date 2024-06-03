@@ -44,17 +44,17 @@ sort -u sample-data/vps/necessary/* > necessary.txt
 
 # Create the list to blacklist 
 while read -r KMOD; do
-sed -i "s/^${KMOD}$//g" blacklist.txt
+sed -i "s/^${KMOD}$//gm" blacklist.txt
 done < necessary.txt
 
 # Module filtering
 
 while read -r KMOD; do
-sed -i "s/^${KMOD}.*//g" blacklist.txt
+sed -i "s/^${KMOD}.*//gm" blacklist.txt
 done < kmod-filter-start
 
 while read -r KMOD; do
-sed -i "s/.*${KMOD}.*//g" blacklist.txt
+sed -i "s/.*${KMOD}.*//gm" blacklist.txt
 done < kmod-filter-all
 
 # Delete empty lines

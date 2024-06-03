@@ -23,7 +23,7 @@ lsmod | awk '{ print $1 }' > necessary.txt
 
 # Create the list to blacklist 
 while read -r KMOD; do
-sed -i "s/^${KMOD}$//g" blacklist.txt
+sed -i "s/^${KMOD}$//gm" blacklist.txt
 done < necessary.txt
 
 # Delete empty lines
