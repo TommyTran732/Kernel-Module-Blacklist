@@ -24,6 +24,7 @@ hv_
 sata_
 spl
 squashfs
+rtc-
 uas
 udf
 usb_storage
