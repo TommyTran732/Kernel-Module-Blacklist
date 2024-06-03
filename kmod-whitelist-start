@@ -1,7 +1,11 @@
 cifs
+dm_crypt
+dm_mod
+dm_integrity
 ebtables
 ebtable_
 ebt_
+encrypted_keys
 exfat
 fat
 iptable_
@@ -15,6 +19,7 @@ nvme
 pvpanic
 hv_
 sata_
+uas
 usb_storage
 vbox
 vfat
