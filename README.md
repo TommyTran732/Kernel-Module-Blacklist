@@ -29,7 +29,7 @@ Additionally, the output of `lshw`, information on your workload, etc will be gr
 
 ## Supported hardwware/Workload
 
-Reasonably new and common hard hardware and will be added to the `sample-data` dictory and used to generate the kernel module blacklist. The same goes for server workloads - if it is a reasonably common workload, it will be supported.
+Reasonably new and common hard hardware and will be added to the `sample-data` directory and used to generate the kernel module blacklist. The same goes for server workloads - if it is a reasonably common workload, it will be supported.
 
 One exception for this is the use of technologies that are known to be vulnerable, such as Thunderbolt. Their kernel module will always remain blacklisted and whichever workload relies on them will not be supported.
 
