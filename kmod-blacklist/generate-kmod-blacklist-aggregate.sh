@@ -25,9 +25,6 @@ while read -r KMOD; do
 sed -i "s/^${KMOD}$//g" blacklist.txt
 done < necessary.txt
 
-# Delete empty lines
-sed -i '/^$/d' blacklist.txt
-
 # Module filtering
 
 while read -r KMOD; do
@@ -37,6 +34,9 @@ done < kmod-filter-start
 while read -r KMOD; do
 sed -i "s/.*${KMOD}.*//g" blacklist.txt
 done < kmod-filter-all
+
+# Delete empty lines
+sed -i '/^$/d' blacklist.txt
 
 # Create final blacklist config
 while read -r KMOD; do

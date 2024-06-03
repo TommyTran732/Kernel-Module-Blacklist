@@ -5,5 +5,7 @@ nf_
 nvme
 pvpanic
 hv_
+sata_
 vbox
+xen-
 xt_
