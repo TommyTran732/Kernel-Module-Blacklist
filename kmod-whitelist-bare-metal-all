@@ -2,4 +2,5 @@ acpi
 mtk
 panel
 qcom
+qemu
 usb
