@@ -34,6 +34,7 @@ nls
 ntfs3
 nvme
 pktcdvd
+pmt
 pvpanic
 hv_
 sata_
