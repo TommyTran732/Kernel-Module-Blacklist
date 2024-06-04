@@ -1,2 +1,6 @@
 thunderbolt
 mei
+mei_hdcp
+mei_pxp
+mei_gsc
+mei_me
