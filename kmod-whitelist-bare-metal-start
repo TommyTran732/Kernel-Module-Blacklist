@@ -6,3 +6,4 @@ lcd
 led
 ledtrig
 processor_thermal
+spi
