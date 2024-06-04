@@ -26,6 +26,9 @@ sata_
 spl
 squashfs
 rtc-
+serial
+sermouse
+serport
 uas
 udf
 usb_storage
