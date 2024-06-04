@@ -4,6 +4,8 @@ hyperv
 mouse
 raid
 rfkill
+scsi
+sysfs
 tpm
 vfio
 virtio
