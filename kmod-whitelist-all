@@ -6,3 +6,4 @@ tpm
 vfio
 virtio
 vmw
+xhci
