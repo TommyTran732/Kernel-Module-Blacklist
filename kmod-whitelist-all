@@ -8,4 +8,5 @@ tpm
 vfio
 virtio
 vmw
+vsock
 xhci
