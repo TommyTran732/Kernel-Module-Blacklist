@@ -9,12 +9,15 @@ encrypted_keys
 exfat
 fat
 f2fs
+gre
 hid-
 ip_set
+ip_gre
 iptable_
 ipt_
 ip6table_
 ip6t_
+ip6_gre
 loop
 nfnetlink
 nfsv4
