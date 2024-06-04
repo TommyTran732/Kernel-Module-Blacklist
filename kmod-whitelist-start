@@ -36,6 +36,7 @@ nvme
 pktcdvd
 pmt
 pvpanic
+qemu
 hv_
 sata_
 spl
