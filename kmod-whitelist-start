@@ -32,6 +32,7 @@ rtc-
 serial
 sermouse
 serport
+snd
 uas
 udf
 usb_storage
