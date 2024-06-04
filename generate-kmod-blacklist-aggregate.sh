@@ -43,7 +43,7 @@ dataset_selection
 sort -u sample-data/"${dataset}"/available/* > blacklist.txt
 
 # Combine all sample data for necessary
-sort -u sample-data/vps/necessary/* > necessary.txt
+sort -u sample-data/"${dataset}"/necessary/* > necessary.txt
 
 # Remove blacklisted modules from the necessary list
 
