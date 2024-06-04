@@ -1,9 +1,11 @@
 dell-
 dell_
 fujitsu
+hdmi
 i2c
 lcd
 led
 ledtrig
 processor_thermal
+sparse-keymap
 spi
