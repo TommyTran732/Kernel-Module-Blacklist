@@ -7,5 +7,6 @@ lcd
 led
 ledtrig
 processor_thermal
+rc-core
 sparse-keymap
 spi
