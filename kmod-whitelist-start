@@ -1,8 +1,6 @@
 btrfs
 cifs
-dm_crypt
-dm_mod
-dm_integrity
+dm_
 ebtables
 ebtable_
 ebt_
