@@ -45,6 +45,7 @@ rtc-
 serial
 sermouse
 serport
+sev-guest
 snd
 tunnel4
 tunnel6
