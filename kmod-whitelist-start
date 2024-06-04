@@ -10,6 +10,7 @@ exfat
 fat
 f2fs
 hid-
+ip_set
 iptable_
 ipt_
 ip6table_
