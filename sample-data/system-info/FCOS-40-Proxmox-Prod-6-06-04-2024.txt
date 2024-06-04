@@ -1,0 +1,1 @@
+Linux version 6.8.5-301.fc40.x86_64 (mockbuild@0bc0cc78c12e4762acf61c209bd02e96) (gcc (GCC) 14.0.1 20240328 (Red Hat 14.0.1-0), GNU ld version 2.41-34.fc40) #1 SMP PREEMPT_DYNAMIC Thu Apr 11 20:00:10 UTC 2024

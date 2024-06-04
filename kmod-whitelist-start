@@ -1,6 +1,7 @@
 arptable_filter
 arp_tables
 arpt_mangle
+ata_
 btrfs
 cifs
 dm-
@@ -33,6 +34,7 @@ nf_
 nls
 ntfs3
 nvme
+pata
 pktcdvd
 pmt
 pvpanic
