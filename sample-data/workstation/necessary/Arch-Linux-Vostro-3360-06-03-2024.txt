@@ -1,4 +1,3 @@
-Module
 ses
 enclosure
 scsi_transport_sas
