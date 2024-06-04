@@ -1,3 +1,6 @@
+arptable_filter
+arp_tables
+arpt_mangle
 btrfs
 cifs
 dm_
@@ -14,10 +17,13 @@ hid-
 ip_set
 ip_gre
 iptable_
+ip_tunnel
 ipt_
 ip6table_
 ip6t_
 ip6_gre
+ip6_tunnel
+ip6_udp_tunnel
 loop
 nfnetlink
 nfsv4
@@ -37,8 +43,11 @@ serial
 sermouse
 serport
 snd
+tunnel4
+tunnel6
 uas
 udf
+udp_tunnel
 vbox
 vfat
 wireguard
