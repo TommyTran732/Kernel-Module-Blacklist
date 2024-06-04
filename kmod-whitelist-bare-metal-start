@@ -1,4 +1,7 @@
 dell-
 dell_
+i2c
+lcd
+led
 ledtrig
 processor_thermal

@@ -3,6 +3,7 @@ arp_tables
 arpt_mangle
 btrfs
 cifs
+dm-
 dm_
 ebtables
 ebtable_
