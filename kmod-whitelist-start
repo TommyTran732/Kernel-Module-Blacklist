@@ -8,6 +8,7 @@ encrypted_keys
 exfat
 fat
 f2fs
+hid-
 iptable_
 ipt_
 ip6table_
