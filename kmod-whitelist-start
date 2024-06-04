@@ -52,6 +52,8 @@ udp_tunnel
 vbox
 vfat
 wireguard
+xenfs
+xen_wdt
 xen-
 xt_
 xfs
