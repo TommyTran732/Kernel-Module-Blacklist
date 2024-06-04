@@ -12,11 +12,14 @@ iptable_
 ipt_
 ip6table_
 ip6t_
+loop
+nfnetlink
 nfsv4
 nft_
 nf_
 ntfs3
 nvme
+pktcdvd
 pvpanic
 hv_
 sata_
