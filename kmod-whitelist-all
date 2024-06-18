@@ -1,6 +1,8 @@
 ahci
 amd
+ceph
 drm
+ecryptfs
 hyperv
 intel
 mouse
