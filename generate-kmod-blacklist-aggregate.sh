@@ -17,7 +17,7 @@
 set -eu
 
 output(){
-    echo -e '\e[36m'"$1"'\e[0m';
+    printf '\e[1;34m%-6s\e[m\n' "${@}"
 }
 
 dataset_selection() {
