@@ -14,6 +14,8 @@
 # License for the specific language governing permissions and limitations under
 # the License.
 
+set -eu
+
 # List available modules
 # shellcheck disable=SC2010
 ls -R /lib/modules/"$(uname -r)"/kernel/{drivers,fs,net,sound} | grep "\.ko" | sed 's/.ko.xz//g' | sed 's/.ko.zst//g' > blacklist.txt

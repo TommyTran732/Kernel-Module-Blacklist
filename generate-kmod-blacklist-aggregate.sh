@@ -14,6 +14,8 @@
 # License for the specific language governing permissions and limitations under
 # the License.
 
+set -eu
+
 output(){
     echo -e '\e[36m'"$1"'\e[0m';
 }
